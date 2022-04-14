@@ -1,0 +1,120 @@
+.intro{
+    background: url('../img/intro-bg.png') center / cover no-repeat;
+    padding: 90px 0;
+    @include media(1200){
+        padding: 60px 0;
+    }
+    @include media(768){
+        padding: 30px 0 70px 0;
+        background: url('../img/intro-bg.png') right / cover no-repeat;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 140%;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+        @include media(1200){
+            font-size: 33px;
+        }
+        @include media(992){
+            font-size: 28px;
+        }
+        @include media(768){
+            font-size: 20px;
+            line-height: 140%;
+            margin-bottom: 30px;
+        }
+    }
+    &__desc{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+        @include media(992){
+            margin-bottom: 30px;
+        }
+        @include media(768){
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            margin-bottom: 20px;
+        }
+    }
+    &__content{
+        padding: 20px 0 35px 0;
+        background: rgba(34, 34, 34, 0.3);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(20px);
+        margin-bottom: 30px;
+        @include media(992){
+            padding-bottom: 30px;
+        }
+        @include media(768){
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        row-gap: 22px;
+        flex-wrap: wrap;
+        @include media(576){
+            row-gap: 20px;
+        }
+    }
+    &__item{
+        width: calc(33.3333% - 60px);
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        @include media(1200){
+            width: calc(33.33333% - 25px);
+        }
+        @include media(992){
+            width: calc(50% - 25px);
+        }
+        @include media(768){
+            width: 100%;
+        }
+        @include media(576){
+            column-gap: 15px;
+        }
+    }
+    &__p{
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #FFFFFF;
+        @include media(768){
+            max-width: 320px;
+            width: 100%;
+        }
+    }
+    &__buttons{
+        display: flex;
+        column-gap: 30px;
+        @include media(768){
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: center;
+        }
+    }
+    &__btn{
+        &_primary{
+            width: 370px;
+            height: 70px;
+        }
+    }
+    &__img{
+        img{
+            @include media(576){
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

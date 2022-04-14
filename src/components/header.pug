@@ -1,0 +1,39 @@
+mixin header()
+    header.header
+        .header__nav.container 
+            .header__top 
+                .header__logos 
+                    a(href="index.html").logo
+                        img(src="@img/logo.png", alt="").logo__img
+                    .menu 
+                        .menu-icons 
+                            span.menu-btn.first-menu
+                            span.menu-btn.disable-menu
+                            span.menu-btn.third-menu
+                    p.header__p.disable-lg Технический и коммерческий учет электроэнергии. Энергоэфффективность
+                .header__infos.disable-lg
+                    p.header__info
+                        img(src="@img/header-location-icon.png", alt="").header__icon
+                        | г. Москва, г. Щербинка, Восточная улица, д.4
+                    a(href="mailto:info@electroff.ru").header__info.bold 
+                        img(src="@img/header-mail-icon.png", alt="").header__icon
+                        | info@electroff.ru
+                .header__works 
+                    a(href="tel::8(495)5422225").header__phone 8 (495) 54 2222 5
+                    a(href="#!").header__works-link Заказать звонок
+                    p.header__works-days.disable-lg Пн-Пт с 09:00 до 18:00
+            .header__list 
+                li.header__li 
+                    a(href="#!").header__link Главная
+                li.header__li 
+                    a(href="#!").header__link Типы шкафов автоматики
+                li.header__li 
+                    a(href="#!").header__link Применение шкафов  
+                li.header__li 
+                    a(href="#!").header__link Преимущества сотрудничества 
+                li.header__li 
+                    a(href="#!").header__link О компании 
+                li.header__li 
+                    a(href="#!").header__link Контакты 
+                li.header__li 
+                    a(href="#!").header__link Каталог
