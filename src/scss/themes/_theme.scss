@@ -120,3 +120,28 @@ ul{
         }
     }
 }
+.polygon{
+    background: url(../img/polygon.svg) center / cover no-repeat;
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    @include media(992){
+        width: 166px;
+        height: 166px;
+    }
+    &-p{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #FFFFFF;
+        @include media(992){
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 150%;
+        }
+    }
+}
