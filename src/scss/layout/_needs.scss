@@ -70,6 +70,9 @@
                 backdrop-filter: blur(20px);
                 width: 40px;
                 height: 30px;
+                @include media(576){
+                    left: 15px;
+                }
                 &::before{
                     content: '';
                     position: absolute;
@@ -88,6 +91,9 @@
                 backdrop-filter: blur(20px);
                 width: 40px;
                 height: 30px;
+                @include media(576){
+                    right: -15px;
+                }
                 &::before{
                     content: '';
                     position: absolute;

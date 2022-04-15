@@ -1194,6 +1194,14 @@ ul {
     width: calc(100% + 30px);
   }
 
+  .needs .swiper-button-prev {
+    left: 15px;
+  }
+
+  .needs .swiper-button-next {
+    right: -15px;
+  }
+
   .btn_primary {
     width: 100%;
   }
