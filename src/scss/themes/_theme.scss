@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    font-family: OpenSans;
+    font-family: OpenSans, sans-serif;
     &:focus,
     &:active{
         outline: none;
@@ -75,5 +75,37 @@ ul{
     }
     @include media(576){
         width: 100%;
+    }
+}
+.section{
+    padding: 100px 0;
+    @include media(992){
+        padding: 50px 0;
+    }
+}
+.title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 140%;
+    color: #222222;
+    &__span{
+        color: #A81A47;
+    }
+    &_white{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 140%;
+        color: #FFFFFF;
+        @include media(1200){
+            font-size: 27px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center; 
+        }
+        @include media(992){
+            font-size: 20px;
+            line-height: 140%;
+            text-align: left;
+        }
     }
 }

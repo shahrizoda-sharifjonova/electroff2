@@ -2,9 +2,11 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation } from 'swiper'; 
 
-// const swiper = new Swiper();
+// import Swiper from 'swiper/bundle';
+
+const swiper = new Swiper();
 
 const menu = document.querySelector('.menu');
 const disableMenu = document.querySelector('.disable-menu');
@@ -23,3 +25,35 @@ menu.addEventListener('click', (e)=>{
     menuIcons.classList.toggle('active')
     headerList.classList.toggle('active')
 })
+
+new Swiper(".needs__swiper", { 
+    slidesPerView: 1,
+    spaceBetween: 10,
+    modules: [Navigation],
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+    },
+    navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+    },
+    breakpoints: {
+        1400: {
+        slidesPerView: 6,
+        spaceBetween: 30,
+        },
+        1200: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        },
+        768:{
+        slidesPerView: 2,
+        spaceBetween: 30,
+        },
+        576:{
+        slidesPerView: 1,
+        spaceBetween: 20,
+        },
+    },
+});
