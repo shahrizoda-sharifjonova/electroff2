@@ -88,6 +88,17 @@ ul{
     font-size: 36px;
     line-height: 140%;
     color: #222222;
+    @include media(1200){
+        font-size: 32px;
+    }
+    @include media(992){
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    @include media(576){
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
     &__span{
         color: #A81A47;
     }

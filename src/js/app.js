@@ -2,7 +2,7 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 
-import Swiper, { Navigation } from 'swiper'; 
+import Swiper, { Navigation, Pagination } from 'swiper'; 
 
 // import Swiper from 'swiper/bundle';
 
@@ -55,5 +55,23 @@ new Swiper(".needs__swiper", {
         slidesPerView: 1,
         spaceBetween: 20,
         },
+    },
+});
+
+new Swiper(".estates__swiper", { 
+    slidesPerView: 1,
+    spaceBetween: 30,
+    modules: [Navigation, Pagination],
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+    },
+    navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
     },
 });
