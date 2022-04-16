@@ -90,3 +90,53 @@ new Swiper(".results__swiper", {
         }
     }
 });
+
+const introBtn = document.querySelector('.intro__btn');
+const orderBtn = document.querySelector('.order__btn');
+const popup =  document.querySelector('.popup');
+const popupClose =  document.querySelector('.popup__close');
+
+introBtn.addEventListener('click', (e)=>{
+    popup.classList.toggle('active');
+    body.classList.toggle('active');
+})
+
+orderBtn.addEventListener('click', (e)=>{
+    popup.classList.toggle('active');
+    body.classList.toggle('active');
+})
+
+popupClose.addEventListener('click', (e)=>{
+    popup.classList.remove('active');
+    body.classList.remove('active');
+})
+
+
+const form = document.getElementById('formContent');
+form.addEventListener('submit', formSend);
+async function formSend(e) {
+    e.preventDefault();
+    let formData = new FormData(form);
+    form.classList.add('sending');
+    let response = await fetch('files/sendmail.php', {
+        method: 'POST',
+        body: formData
+    });
+    if(response.ok){
+        let result = await response.json();
+        form.classList.add('success');
+        form.classList.remove('sending');
+        form.reset();
+        location.reload();
+    }else{
+        alert("Ошибка");
+        form.classList.remove('sending');
+    }
+}
+
+import IMask from 'imask';
+
+var phoneMask = IMask(
+    document.getElementById('number'), {
+      mask: '+{7}(000)000-00-00'
+    });

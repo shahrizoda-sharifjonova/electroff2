@@ -1,0 +1,42 @@
+mixin popup()
+    .popup
+        .popup__body
+            .popup__close
+            .popup__content
+                form(action="#!").popup__form#formContent
+                    label(for="name").popup__label Введите ваше имя*
+                    input(type="text" placeholder="Имя Фамилия" name="name")#name.popup__input
+                    p.popup__subtitle Где удобно получить консультацию?
+                    .popup__socials 
+                        .popup__social
+                            input(type="radio" name="social")#whatsapp.popup__input_radio
+                            label(for="whatsapp").popup__p What’s app
+                            label(for="whatsapp").popup__img
+                                img(src="@img/whatsapp.png", alt="" draggable="false" loading="lazy")
+                        .popup__social
+                            input(type="radio" name="social")#telegram.popup__input_radio
+                            label(for="telegram").popup__p Telegram
+                            label(for="telegram").popup__img
+                                img(src="@img/telegram.png", alt="" draggable="false" loading="lazy")
+                        .popup__social
+                            input(type="radio" name="social")#skype.popup__input_radio
+                            label(for="skype").popup__p Zoom / Skype
+                            label(for="skype").popup__img
+                                img(src="@img/skype.png", alt="" draggable="false" loading="lazy")
+                        .popup__social
+                            input(type="radio" name="social")#phone.popup__input_radio
+                            label(for="phone").popup__p По телефону
+                            label(for="phone").popup__img
+                                img(src="@img/popup-phone.svg", alt="" draggable="false" loading="lazy")
+                    label(for="number").popup__subtitle.popup__subtitle_small Укажите ваш контактный номер*
+                    input(type="tel" placeholder="+ 7 (ххх) ххх–хх–хх" name="number")#number.popup__input
+                    p.popup__desc * Обязательные поля для заполнения
+                    .popup__row
+                        input(type="checkbox" name="checkbox")#checkbox.popup__input_checkbox
+                        label(for="checkbox")#checkbox.popup__row-p Я ознакомлен с политикой конфиденциальности и даю согласие на обработку персональных данных
+                    button(type="submit").popup__btn.disable-lg Отправить
+                .popup__right 
+                    p.popup__name #[span.popup__span Геннадий Николаевич Войтенко] #[br] Менеджер по проектам
+                    p.popup__info Благодарю вас за обращение за консультацией!
+                    p.popup__time Я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00)
+                    button(type="submit").popup__btn.enable-lg Отправить 

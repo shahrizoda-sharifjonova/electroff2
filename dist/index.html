@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220416203444">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220416235306">
     <title>Document</title>
   </head>
   <body> 
@@ -341,6 +341,54 @@
                     <div class="order__right"> <a class="order__btn btn" href="#!">Заказать консультацию</a></div>
                   </div>
                 </div>
+                <div class="popup">
+                  <div class="popup__body">
+                    <div class="popup__close"></div>
+                    <div class="popup__content">
+                      <form class="popup__form" action="#!" id="formContent">
+                        <label class="popup__label" for="name">Введите ваше имя*</label>
+                        <input class="popup__input" type="text" placeholder="Имя Фамилия" name="name" id="name">
+                        <p class="popup__subtitle">Где удобно получить консультацию?</p>
+                        <div class="popup__socials"> 
+                          <div class="popup__social">
+                            <input class="popup__input_radio" type="radio" name="social" id="whatsapp">
+                            <label class="popup__p" for="whatsapp">What’s app</label>
+                            <label class="popup__img" for="whatsapp"><picture><source srcset="img/whatsapp.webp" type="image/webp"><img src="img/whatsapp.png" alt="" draggable="false" loading="lazy"></picture></label>
+                          </div>
+                          <div class="popup__social">
+                            <input class="popup__input_radio" type="radio" name="social" id="telegram">
+                            <label class="popup__p" for="telegram">Telegram</label>
+                            <label class="popup__img" for="telegram"><picture><source srcset="img/telegram.webp" type="image/webp"><img src="img/telegram.png" alt="" draggable="false" loading="lazy"></picture></label>
+                          </div>
+                          <div class="popup__social">
+                            <input class="popup__input_radio" type="radio" name="social" id="skype">
+                            <label class="popup__p" for="skype">Zoom / Skype</label>
+                            <label class="popup__img" for="skype"><picture><source srcset="img/skype.webp" type="image/webp"><img src="img/skype.png" alt="" draggable="false" loading="lazy"></picture></label>
+                          </div>
+                          <div class="popup__social">
+                            <input class="popup__input_radio" type="radio" name="social" id="phone">
+                            <label class="popup__p" for="phone">По телефону</label>
+                            <label class="popup__img" for="phone"><img src="img/popup-phone.svg" alt="" draggable="false" loading="lazy"></label>
+                          </div>
+                        </div>
+                        <label class="popup__subtitle popup__subtitle_small" for="number">Укажите ваш контактный номер*</label>
+                        <input class="popup__input" type="tel" placeholder="+ 7 (ххх) ххх–хх–хх" name="number" id="number">
+                        <p class="popup__desc">* Обязательные поля для заполнения</p>
+                        <div class="popup__row">
+                          <input class="popup__input_checkbox" type="checkbox" name="checkbox" id="checkbox">
+                          <label class="popup__row-p" for="checkbox" id="checkbox">Я ознакомлен с политикой конфиденциальности и даю согласие на обработку персональных данных</label>
+                        </div>
+                        <button class="popup__btn disable-lg" type="submit">Отправить</button>
+                      </form>
+                      <div class="popup__right"> 
+                        <p class="popup__name"><span class="popup__span">Геннадий Николаевич Войтенко</span> <br> Менеджер по проектам</p>
+                        <p class="popup__info">Благодарю вас за обращение за консультацией!</p>
+                        <p class="popup__time">Я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00)</p>
+                        <button class="popup__btn enable-lg" type="submit">Отправить </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
       </div>
             <footer class="footer section"> 
               <div class="footer__body container"> 
@@ -360,7 +408,7 @@
               </div>
             </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20220416203444"></script>
-    <script src="js/app.min.js?_v=20220416203444"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20220416235306"></script>
+    <script src="js/app.min.js?_v=20220416235306"> </script>
   </body>
 </html>
