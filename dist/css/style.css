@@ -347,7 +347,7 @@
 }
 
 .header__link {
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -376,7 +376,7 @@
 }
 
 .header__p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -409,7 +409,7 @@
           column-gap: 12px;
   max-width: 215px;
   width: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
@@ -433,7 +433,7 @@
 }
 
 .header__works-link {
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -445,7 +445,7 @@
 }
 
 .header__works-days {
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -454,7 +454,7 @@
 }
 
 .header__phone {
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
