@@ -1,1 +1,110 @@
-// Футер
+.footer{
+    background: #222222;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media(1400){
+            flex-wrap: wrap;
+            row-gap: 30px;
+        }
+        @include media(767){
+            flex-direction: column;
+        }
+    }
+    &__logos{
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        &-p{
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 140%;
+            color: #FFFFFF;
+            max-width: 260px;
+            width: 100%;
+        }
+    }
+    &__icons{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        @include media(767){
+            order: 1;
+        }
+    }
+    &__informations{
+        display: flex;
+        @include media(1200){
+            justify-content: space-between;
+            width: 100%;
+        }
+        @include media(767){
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+    &__infos{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        &-p{
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            font-size: 14px;
+            line-height: 150%;
+            color: #FFFFFF;
+            max-width: 215px;
+            width: 100%;
+            @include media(767){
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                row-gap: 5px;
+                margin-bottom: 20px;
+            }
+            &:nth-of-type(2){
+                margin-left: 5px;
+            }
+        }
+    }
+    &__works{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @include media(767){
+            order: -1;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        &-phone{
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 140%;
+            color: #FFFFFF;
+            @include media(767){
+                margin-bottom: 10px;
+            }
+        }
+        &-link{
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 140%;
+            text-decoration-line: underline;
+            color: #FFFFFF;
+            margin-bottom: 7px;
+            @include media(767){
+                margin-bottom: 15px;
+            }
+        }
+        &-times{
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 140%;
+            color: #FFFFFF;
+        }
+    }
+}

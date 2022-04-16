@@ -1,2 +1,24 @@
 mixin footer()
-    footer.footer
+    footer.footer.section 
+        .footer__body.container 
+            .footer__logos  
+                a(href="index.html").footer__logos-img 
+                    img(src="@img/logo.png", alt="") 
+                p.footer__logos-p.disable-md2 Энергоэффективная система освещения для экономии, комфорта и оптимизации работы персонала
+            .footer__icons 
+                a(href="https://whatsapp.com").footer__icons
+                    img(src="@img/whatsapp.png", alt="")
+                a(href="https://telegram.com").footer__icons
+                    img(src="@img/telegram.png", alt="")
+                a(href="https://skype.com").footer__icons
+                    img(src="@img/skype.png", alt="")
+                a(href="https://phone.com").footer__icons
+                    img(src="@img/phone-alt.png", alt="")
+            .footer__informations 
+                    .footer__infos 
+                        p.footer__infos-p #[img(src="@img/header-location-icon.png", alt="")] г. Москва, г. Щербинка, Восточная улица, д.4
+                        p.footer__infos-p #[img(src="@img/header-mail-icon.png", alt="")] #[b info@electroff.ru]
+                    .footer__works  
+                        a(href="tel::8(495)5422225").footer__works-phone 8 (495) 54 2222 5
+                        a(href="#!").footer__works-link Заказать звонок
+                        p.footer__works-times Пн-Пт с 09:00 до 18:00

@@ -145,3 +145,29 @@ ul{
         }
     }
 }
+.star{
+    width: 229px;
+    height: 229px;
+    background: url(../img/star.svg) center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include media(576){
+        width: 167px;
+        height: 167px;
+    }
+    &-p{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #222222;
+        @include media(576){
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.order{
+    background: url(../img/help-bg.png) center / cover no-repeat;
+    width: 100%;
+    @include media(576){
+        padding: 90px 0 50px !important;
+    }
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media(992){
+            flex-direction: column;
+            row-gap: 30px;
+        }
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 140%;
+        color: #FFFFFF;
+        margin-bottom: 26px;
+        max-width: 569px;
+        width: 100%;
+        @include media(992){
+            font-size: 22px;
+            line-height: 140%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        @include media(576){
+            text-align: left;
+        }
+    }
+    &__right{
+        @include media(992){
+            width: 100%;
+        }
+    }
+    &__btn{
+        @include media(992){
+            margin-right: auto !important;
+            margin-left: auto !important;
+        }
+        @include media(576){
+            width: 270px !important;
+        }
+    }
+}
