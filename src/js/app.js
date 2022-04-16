@@ -75,3 +75,18 @@ new Swiper(".estates__swiper", {
         nextEl: ".swiper-button-next",
     },
 });
+
+new Swiper(".results__swiper", { 
+    slidesPerView: 1,
+    spaceBetween: 30,
+    modules: [Navigation],
+    navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+    },
+    breakpoints: {
+        576:{
+            slidesPerView: 2,
+        }
+    }
+});
