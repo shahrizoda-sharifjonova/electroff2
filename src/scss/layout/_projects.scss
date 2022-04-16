@@ -26,7 +26,7 @@
         background: rgba(255, 255, 255, 0.3);
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
         backdrop-filter: blur(20px);
-        padding: 65px 0 45px 50px;
+        padding: 80px 0 45px 50px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
@@ -103,7 +103,7 @@
         font-size: 16px;
         line-height: 150%;
         color: #222222;
-        max-width: 350px;
+        max-width: 400px;
         width: 100%;
         @include media(992){
             max-width: 435px;

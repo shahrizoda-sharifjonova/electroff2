@@ -1,0 +1,106 @@
+.partners{
+    background: #263D4F;
+    @include media(576){
+        margin-bottom: 130px;
+    }
+    &__title{
+        margin-bottom: 30px;
+        @include media(992){
+            text-align: center !important;
+        }
+        @include media(576){
+            text-align: left !important;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        column-gap: 100px;
+        padding-top: 30px;
+        @include media(1200){
+            column-gap: 0;
+        }
+        @include media(992){
+            flex-direction: column;
+            row-gap: 20px;
+            padding-top: 0;
+            align-items: center;
+        }
+    }
+    &__col{
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+        &:nth-of-type(2){
+            align-items: center;
+            @include media(992){
+                order: 1;
+            }
+        }
+        @include media(992){
+            row-gap: 20px;
+        }
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #FFFFFF;
+        max-width: 300px;
+        width: 100%;
+        @include media(992){
+            max-width: 400px;
+        }
+    }
+    &__star{
+        width: 229px;
+        height: 229px;
+        background: url(../img/star.svg) center / cover no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 13px;
+        padding-right: 13px;
+        @include media(992){
+            order: 1;
+        }
+        @include media(576){
+            margin-bottom: -150px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 167px;
+            height: 167px;
+            padding: 0 10px;
+        }
+        &-p{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+            color: #222222;
+            @include media(576){
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+            }
+        }
+        &-span{
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 140%;
+            text-align: center;
+            color: #A81A47;
+            @include media(576){
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 140%;
+            }
+        }
+    }
+}
