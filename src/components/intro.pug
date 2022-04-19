@@ -1,35 +1,31 @@
 mixin intro()
-    .intro 
-        .intro__body
-            .intro__top.container 
-                h1.intro__title Сэкономьте время и ресурсы с типовым электрощитовым и шкафным оборудованием
+    .intro
+        .intro__body.container 
+            .intro__left 
+                h2.intro__title.title Сэкономьте время и ресурсы с #[span.title__span типовыми электрическими шкафами]
                 p.intro__desc Для применения на различных предприятиях и объектах
-            .intro__content 
-                .intro__wrapper.container
-                    .intro__item 
-                        .intro__img     
-                            img(src="@img/intro-icon-1.svg", alt="" draggable="false" loading="lazy")
-                        p.intro__p Промышленные предприятия
-                    .intro__item 
-                        .intro__img     
-                            img(src="@img/intro-icon-2.svg", alt="" draggable="false" loading="lazy")
-                        p.intro__p Телекоммуникации и связь 
-                    .intro__item 
-                        .intro__img     
-                            img(src="@img/intro-icon-3.svg", alt="" draggable="false" loading="lazy")
-                        p.intro__p Фотоэлектрические станции (PV)
-                    .intro__item 
-                        .intro__img     
-                            img(src="@img/intro-icon-4.svg", alt="" draggable="false" loading="lazy")
-                        p.intro__p Стройплощадки, гражданское и индивидуальное строительство, ЖКХ
-                    .intro__item 
-                        .intro__img     
-                            img(src="@img/intro-icon-5.svg", alt="" draggable="false" loading="lazy")
-                        p.intro__p Предприятия и объекты электроэнергетики
-                    .intro__item 
-                        .intro__img     
-                            img(src="@img/intro-icon-6.svg", alt="" draggable="false" loading="lazy")
-                        p.intro__p Инфраструктурные объекты
-            .intro__buttons.container     
-                a(href="#!").intro__btn.btn Получить консультацию 
-                a(href="#tips").intro__btn.intro__btn_primary.btn_primary Выбрать шкаф из каталога 
+                .intro__content 
+                    ul.intro__list
+                        li.intro__li #[img(src="@img/intro-icon-1.svg", alt="" draggable="false" loading="lazy")] Промышленные предприятия
+                        li.intro__li #[img(src="@img/intro-icon-2.svg", alt="" draggable="false" loading="lazy")] Фотоэлектрические станции (PV)
+                        li.intro__li #[img(src="@img/intro-icon-3.svg", alt="" draggable="false" loading="lazy")] Телекоммуникации и связь 
+                        li.intro__li #[img(src="@img/intro-icon-4.svg", alt="" draggable="false" loading="lazy")] Инфраструктурные объекты
+                        li.intro__li #[img(src="@img/intro-icon-5.svg", alt="" draggable="false" loading="lazy")] Стройплощадки, гражданское и индивидуальное строительство, ЖКХ
+                        li.intro__li #[img(src="@img/intro-icon-6.svg", alt="" draggable="false" loading="lazy")] Предприятия и объекты электроэнергетики
+                    .intro__buttons 
+                        a(href="#!").intro__btn.btn.popup-open Получить консультацию
+                        a(href="#!").intro__btn.btn_primary Выбрать шкаф из каталога
+            .intro__right.disable-xl 
+                .intro__item
+                    .intro__img 
+                        img(src="@img/intro-img-1.png", alt="" draggable="false" loading="lazy")
+                    p.intro__p шкаф Автоматизации
+                .intro__item
+                    .intro__img 
+                        img(src="@img/intro-img-2.png", alt="" draggable="false" loading="lazy")
+                    p.intro__p Зарядная станция
+                .intro__item
+                    .intro__img 
+                        img(src="@img/intro-img-3.png", alt="" draggable="false" loading="lazy")
+                    p.intro__p шкаф НКУ
+
