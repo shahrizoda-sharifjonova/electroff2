@@ -4,8 +4,6 @@ functions.isWebp();
 
 import Swiper, { Navigation, Pagination } from 'swiper'; 
 
-// import Swiper from 'swiper/bundle';
-
 const swiper = new Swiper();
 
 const menu = document.querySelector('.menu');
