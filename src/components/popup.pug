@@ -2,34 +2,34 @@ mixin popup()
     .popup
         .popup__body
             .popup__close
-            .popup__content
-                form(action="#!").popup__form#formContent
+            form(action="#!" method="POST").popup__content#formContent
+                .popup__form
                     label(for="name").popup__label Введите ваше имя*
-                    input(type="text" placeholder="Имя Фамилия" name="name")#name.popup__input
+                    input(type="text" placeholder="Имя Фамилия" name="name" required)#name.popup__input
                     p.popup__subtitle Где удобно получить консультацию?
                     .popup__socials 
                         .popup__social
-                            input(type="radio" name="social")#whatsapp.popup__input_radio
+                            input(type="radio" name="social" required value="whatsapp")#whatsapp.popup__input_radio
                             label(for="whatsapp").popup__p What’s app
                             label(for="whatsapp").popup__img
                                 img(src="@img/whatsapp.png", alt="" draggable="false" loading="lazy")
                         .popup__social
-                            input(type="radio" name="social")#telegram.popup__input_radio
+                            input(type="radio" name="social" required value="telegram")#telegram.popup__input_radio
                             label(for="telegram").popup__p Telegram
                             label(for="telegram").popup__img
                                 img(src="@img/telegram.png", alt="" draggable="false" loading="lazy")
                         .popup__social
-                            input(type="radio" name="social")#skype.popup__input_radio
+                            input(type="radio" name="social" required value="skype")#skype.popup__input_radio
                             label(for="skype").popup__p Zoom / Skype
                             label(for="skype").popup__img
                                 img(src="@img/skype.png", alt="" draggable="false" loading="lazy")
                         .popup__social
-                            input(type="radio" name="social")#phone.popup__input_radio
+                            input(type="radio" name="social" required value="phone")#phone.popup__input_radio
                             label(for="phone").popup__p По телефону
                             label(for="phone").popup__img
                                 img(src="@img/popup-phone.svg", alt="" draggable="false" loading="lazy")
                     label(for="number").popup__subtitle.popup__subtitle_small Укажите ваш контактный номер*
-                    input(type="tel" placeholder="+ 7 (ххх) ххх–хх–хх" name="number")#number.popup__input
+                    input(type="tel" placeholder="+ 7 (ххх) ххх–хх–хх" name="number" required)#number.popup__input
                     p.popup__desc * Обязательные поля для заполнения
                     .popup__row
                         input(type="checkbox" name="checkbox")#checkbox.popup__input_checkbox

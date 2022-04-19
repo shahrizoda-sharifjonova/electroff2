@@ -93,6 +93,7 @@ new Swiper(".results__swiper", {
 
 const introBtn = document.querySelector('.intro__btn');
 const orderBtn = document.querySelector('.order__btn');
+const projectsBtn = document.querySelector('.projects__btn');
 const popup =  document.querySelector('.popup');
 const popupClose =  document.querySelector('.popup__close');
 
@@ -102,6 +103,11 @@ introBtn.addEventListener('click', (e)=>{
 })
 
 orderBtn.addEventListener('click', (e)=>{
+    popup.classList.toggle('active');
+    body.classList.toggle('active');
+})
+
+projectsBtn.addEventListener('click', (e)=>{
     popup.classList.toggle('active');
     body.classList.toggle('active');
 })
@@ -138,5 +144,5 @@ import IMask from 'imask';
 
 var phoneMask = IMask(
     document.getElementById('number'), {
-      mask: '+{7}(000)000-00-00'
+      mask: '+{7} (000) 000 - 00 - 00'
     });

@@ -1,5 +1,5 @@
 mixin needs()
-    .needs.section 
+    .needs.section#tips 
         .needs__body.container 
             h2.needs__title.title_white Какие электрические шкафы решат задачи вашего бизнеса?
             .needs__slider.disable-xxl 
@@ -38,13 +38,17 @@ mixin needs()
                                 li.needs__li защита от химических воздействий
                                 li.needs__li выполнение жестких требований к электрооборудованию
                             a(href="#!").needs__link Подробнее 
-                        .needs__slide.swiper-slide 
-                            span.needs__subtitle Шкафы для телекоммуникации и связи
-                            ul.needs__list  
-                                li.needs__li сетевые и серверные шкафы и стойки
-                                li.needs__li климатические шкафы
-                                li.needs__li кабеленесущие системы
-                            a(href="#!").needs__link Подробнее
+                        .needs__slide.nlo
+                            .needs__slide.swiper-slide 
+                                span.needs__subtitle Шкафы для телекоммуникации и связи
+                                ul.needs__list  
+                                    li.needs__li сетевые и серверные шкафы и стойки
+                                    li.needs__li климатические шкафы
+                                    li.needs__li кабеленесущие системы
+                                a(href="#!").needs__link Подробнее
+                            .needs__nlo
+                                a(href="#!").needs__nlo-btn Скачать каталог 
+                                p.needs__nlo-p типового электрощитового <br>и шкафного оборудования  
             .needs__slider.enable-xxl 
                 .needs__swiper.swiper
                     .needs__swiper-wrapper.swiper-wrapper 

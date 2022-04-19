@@ -11,18 +11,12 @@
     $mail->IsHTML(true);
 
     // от кого письмо
-    $mail->setFrom('shahriyordeveloping@gmail.com', 'electroff');
+    $mail->setFrom('ev.larkov@yandex.ru', 'electroff');
     // кому отправить
-    $mail->addAddress('shahriyordeveloping@gmail.com');
-    // $mail->addAddress('shahriyordeveloping@gmail.com');
+    $mail->addAddress('ev.larkov@yandex.ru');
+
     // тема письмо
     $mail->Subject = 'Обратная связь c сайта electroff';
-
-    // VIN-CODE
-    $vin_code = $_POST['vin'];
-
-
-
 
     // тело письмо
     $body = '<h1>Обратная связь c сайта electroff</h1>';
@@ -31,13 +25,16 @@
         $body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
     }
     if(trim(!empty($_POST['number']))){
-        $body.='<p><strong>Номер телефона:</strong> '.$_POST['phone'].'</p>';
+        $body.='<p><strong>Номер телефона:</strong> '.$_POST['number'].'</p>';
+    }
+    if(trim(!empty($_POST['social']))){
+        $body.='<p><strong>Где удобно получить консультацию:</strong> '.$_POST['social'].'</p>';
     }
 
     $mail->Body = $body;
 
     // Отправляем
-    if (!$mail->send()){
+    if (!$mail->send()){ 
         $message = 'Ошибка';
     } else {
         $message = 'Данные отправлены!';
@@ -45,6 +42,6 @@
 
     $response = ['message' => $message];
 
-    header('Content-type: application/json');
+    // header('Content-type: application/json');
     echo json_encode($response);
 ?>

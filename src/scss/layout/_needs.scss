@@ -26,6 +26,45 @@
             margin-left: -15px;
         }
     }
+    &__nlo{
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 370px;
+        &-btn{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            border: 1px solid #A81A47;
+            width: 270px;
+            height: 60px;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 3px;
+                left: -16px;
+                width: 54px;
+                height: 54px;
+                background: url('../img/pdf.png') center / cover no-repeat;
+            }
+        }
+        &-p{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            text-align: center;
+            color: #FFFFFF;            
+        }
+    }
     .swiper{
         width: 100%;
         overflow: hidden;
