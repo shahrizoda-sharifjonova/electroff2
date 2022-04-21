@@ -17903,19 +17903,12 @@ const projectsBtn = document.querySelector('.projects__btn');
 const popup =  document.querySelector('.popup');
 const popupClose =  document.querySelector('.popup__close');
 
-introBtn.addEventListener('click', (e)=>{
-    popup.classList.toggle('active');
-    body.classList.toggle('active');
-})
-
-orderBtn.addEventListener('click', (e)=>{
-    popup.classList.toggle('active');
-    body.classList.toggle('active');
-})
-
-projectsBtn.addEventListener('click', (e)=>{
-    popup.classList.toggle('active');
-    body.classList.toggle('active');
+const popupOpen = document.querySelectorAll('.popup-open');
+popupOpen.forEach(el => {
+    el.addEventListener('click', (e)=>{
+        popup.classList.toggle('active');
+        body.classList.toggle('active');
+    })
 })
 
 popupClose.addEventListener('click', (e)=>{
@@ -17951,7 +17944,29 @@ async function formSend(e) {
 var phoneMask = (0,imask__WEBPACK_IMPORTED_MODULE_2__["default"])(
     document.getElementById('number'), {
       mask: '+{7} (000) 000 - 00 - 00'
-    });
+});
+
+const manp = document.querySelector('.manp');
+const manpClose = document.querySelector('.manp__close');
+const manpOpen = document.querySelectorAll('.manp-open');
+
+manpOpen.forEach(el => {
+    el.addEventListener('click', (e)=>{
+        manp.classList.toggle('active')
+        const img = el.querySelector('img')
+        const source = el.querySelector('source')
+        const src = img.getAttribute('src');
+        const srcset = source.getAttribute('srcset');
+        const i = manp.querySelector('img')
+        const s = manp.querySelector('source')
+        i.setAttribute('src', src);
+        s.setAttribute('srcset', srcset);
+    })
+});
+
+manpClose.addEventListener('click', (e)=>{
+    manp.classList.remove('active')
+})
 })();
 
 /******/ })()
