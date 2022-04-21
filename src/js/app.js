@@ -75,38 +75,38 @@ new Swiper(".estates__swiper", {
 });
 
 new Swiper(".results__swiper", { 
-    slidesPerView: 1,
-    spaceBetween: 30,
+    slidesPerView: 2,
+    spaceBetween: 20,
     modules: [Navigation],
     navigation: {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
     },
-    breakpoints: {
-        576:{
-            slidesPerView: 2,
-        }
-    }
 });
 
 const introBtn = document.querySelector('.intro__btn');
 const orderBtn = document.querySelector('.order__btn');
 const projectsBtn = document.querySelector('.projects__btn');
-const popup =  document.querySelector('.popup');
-const popupClose =  document.querySelector('.popup__close');
+const popup =  document.querySelectorAll('.popup');
+const popupClose =  document.querySelectorAll('.popup__close');
 
 const popupOpen = document.querySelectorAll('.popup-open');
 popupOpen.forEach(el => {
     el.addEventListener('click', (e)=>{
-        popup.classList.toggle('active');
+        const target = el.getAttribute('data-target');
+        document.getElementById(target).classList.add('active');
         body.classList.toggle('active');
     })
 })
 
-popupClose.addEventListener('click', (e)=>{
-    popup.classList.remove('active');
-    body.classList.remove('active');
-})
+popupClose.forEach(ele=> {
+    ele.addEventListener('click', (e)=>{
+        popup.forEach(element => {
+            element.classList.remove('active')
+        });
+        body.classList.remove('active');
+    })
+});
 
 
 const form = document.getElementById('formContent');
@@ -144,18 +144,18 @@ const manpOpen = document.querySelectorAll('.manp-open');
 
 manpOpen.forEach(el => {
     el.addEventListener('click', (e)=>{
-        manp.classList.toggle('active')
-        const img = el.querySelector('img')
-        const source = el.querySelector('source')
+        manp.classList.toggle('active');
+        const img = el.querySelector('img');
+        const source = el.querySelector('source');
         const src = img.getAttribute('src');
         const srcset = source.getAttribute('srcset');
-        const i = manp.querySelector('img')
-        const s = manp.querySelector('source')
-        i.setAttribute('src', src);
-        s.setAttribute('srcset', srcset);
+        const imgTarget = manp.querySelector('img');
+        const sourceTarget = manp.querySelector('source');
+        imgTarget.setAttribute('src', src);
+        sourceTarget.setAttribute('srcset', srcset);
     })
 });
 
 manpClose.addEventListener('click', (e)=>{
-    manp.classList.remove('active')
+    manp.classList.remove('active');
 })

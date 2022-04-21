@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220421202304">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220421221428">
     <title>Document</title>
   </head>
   <body> 
@@ -21,7 +21,7 @@
                   <div class="header__infos disable-lg">
                     <p class="header__info"><picture><source srcset="img/header-location-icon.webp" type="image/webp"><img class="header__icon" src="img/header-location-icon.png" alt=""></picture>г. Москва, г. Щербинка, Восточная улица, д.4</p><a class="header__info bold" href="mailto:info@electroff.ru"> <img class="header__icon" src="img/header-mail-icon.png" alt="">info@electroff.ru</a>
                   </div>
-                  <div class="header__works"> <a class="header__phone" href="tel::8(495)5422225">8 (495) 54 2222 5</a><a class="header__works-link popup-open" href="#!">Заказать звонок</a>
+                  <div class="header__works"> <a class="header__phone" href="tel::8(495)5422225">8 (495) 54 2222 5</a><a class="header__works-link popup-open" href="#!" data-target="tel-popup">Заказать звонок</a>
                     <p class="header__works-days disable-lg">Пн-Пт с 09:00 до 18:00</p>
                   </div>
                 </div>
@@ -51,7 +51,7 @@
                           <li class="intro__li"><img src="img/intro-icon-5.svg" alt="" draggable="false" loading="lazy"> Стройплощадки, гражданское и индивидуальное строительство, ЖКХ</li>
                           <li class="intro__li"><img src="img/intro-icon-6.svg" alt="" draggable="false" loading="lazy"> Предприятия и объекты электроэнергетики</li>
                         </ul>
-                        <div class="intro__buttons"> <a class="intro__btn btn popup-open" href="#!">Получить консультацию</a><a class="intro__btn btn_primary" href="#tips">Выбрать шкаф из каталога</a></div>
+                        <div class="intro__buttons"> <a class="intro__btn btn popup-open" href="#!" data-target="consult-popup">Получить консультацию</a><a class="intro__btn btn_primary" href="#tips">Выбрать шкаф из каталога</a></div>
                       </div>
                     </div>
                     <div class="intro__right disable-xl"> 
@@ -200,7 +200,7 @@
                     <h2 class="projects__title title"><span class="title__span">Хотите использовать</span> такие электрические шкафы в своих проектах?</h2>
                     <p class="projects__desc"><b>Обратитесь к нам!</b> Мы уже поставили и смонтировали шкафы разных типов на десятках объектах</p>
                     <div class="projects__content"> 
-                      <div class="projects__left"> <a class="btn projects__btn popup-open" href="#!">Получить консультацию</a><a class="btn_primary projects__btn_primary" href="#tips">Выбрать шкаф из каталога</a></div>
+                      <div class="projects__left"> <a class="btn projects__btn popup-open" href="#!" data-target="consult-popup">Получить консультацию</a><a class="btn_primary projects__btn_primary" href="#tips">Выбрать шкаф из каталога</a></div>
                       <ul class="projects__list"> 
                         <li class="projects__li"><img src="img/projects-icon-1.svg" alt="" draggable="false" loading="lazy"> Подберем варианты типовых шкафов </li>
                         <li class="projects__li"><img src="img/projects-icon-2.svg" alt="" draggable="false" loading="lazy"> Разработаем специально под ваш проект шкафы для особых условий эксплуатации </li>
@@ -343,10 +343,58 @@
                     <div class="order__left"> 
                       <h2 class="order__title">Закажите обратный звонок и бесплатную консультацию! </h2>
                     </div>
-                    <div class="order__right"> <a class="order__btn btn popup-open" href="#!">Получить консультацию</a></div>
+                    <div class="order__right"> <a class="order__btn btn popup-open" href="#!" data-target="consult-popup">Получить консультацию</a></div>
                   </div>
                 </div>
-                <div class="popup">
+                <div class="popup" id="tel-popup">
+                  <div class="popup__body">
+                    <div class="popup__close"> </div>
+                    <form class="popup__content" action="#!" method="POST" id="formContent">
+                      <div class="popup__form">
+                        <label class="popup__label" for="name">Введите ваше имя*</label>
+                        <input class="popup__input" type="text" placeholder="Имя Фамилия" name="name" required id="name">
+                        <p class="popup__subtitle">Где удобно получить консультацию?</p>
+                        <div class="popup__socials"> 
+                          <div class="popup__social">
+                            <input class="popup__input_radio" type="radio" name="social" required value="whatsapp" id="whatsapp">
+                            <label class="popup__p" for="whatsapp">What’s app</label>
+                            <label class="popup__img" for="whatsapp"><picture><source srcset="img/whatsapp.webp" type="image/webp"><img src="img/whatsapp.png" alt="" draggable="false" loading="lazy"></picture></label>
+                          </div>
+                          <div class="popup__social">
+                            <input class="popup__input_radio" type="radio" name="social" required value="telegram" id="telegram">
+                            <label class="popup__p" for="telegram">Telegram</label>
+                            <label class="popup__img" for="telegram"><picture><source srcset="img/telegram.webp" type="image/webp"><img src="img/telegram.png" alt="" draggable="false" loading="lazy"></picture></label>
+                          </div>
+                          <div class="popup__social">
+                            <input class="popup__input_radio" type="radio" name="social" required value="skype" id="skype">
+                            <label class="popup__p" for="skype">Zoom / Skype</label>
+                            <label class="popup__img" for="skype"><picture><source srcset="img/skype.webp" type="image/webp"><img src="img/skype.png" alt="" draggable="false" loading="lazy"></picture></label>
+                          </div>
+                          <div class="popup__social">
+                            <input class="popup__input_radio" type="radio" name="social" required value="phone" id="phone">
+                            <label class="popup__p" for="phone">По телефону</label>
+                            <label class="popup__img" for="phone"><img src="img/popup-phone.svg" alt="" draggable="false" loading="lazy"></label>
+                          </div>
+                        </div>
+                        <label class="popup__subtitle popup__subtitle_small" for="number">Укажите ваш контактный номер*</label>
+                        <input class="popup__input" type="tel" placeholder="+ 7 (ххх) ххх–хх–хх" name="number" required id="number">
+                        <p class="popup__desc">* Обязательные поля для заполнения</p>
+                        <div class="popup__row">
+                          <input class="popup__input_checkbox" type="checkbox" name="checkbox" id="checkbox">
+                          <label class="popup__row-p" for="checkbox" id="checkbox">Я ознакомлен с политикой конфиденциальности и даю согласие на обработку персональных данных</label>
+                        </div>
+                        <button class="popup__btn disable-lg" type="submit">Отправить</button>
+                      </div>
+                      <div class="popup__right"> 
+                        <p class="popup__name"><span class="popup__span">Геннадий Николаевич Войтенко</span> <br> Менеджер по проектам</p>
+                        <p class="popup__info">Благодарю вас за обращение за консультацией!</p>
+                        <p class="popup__time">Я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00)</p>
+                        <button class="popup__btn enable-lg" type="submit">Отправить</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="popup" id="consult-popup">
                   <div class="popup__body">
                     <div class="popup__close"></div>
                     <form class="popup__content" action="#!" method="POST" id="formContent">
@@ -389,7 +437,7 @@
                         <p class="popup__name"><span class="popup__span">Геннадий Николаевич Войтенко</span> <br> Менеджер по проектам</p>
                         <p class="popup__info">Благодарю вас за обращение за консультацией!</p>
                         <p class="popup__time">Я свяжусь с вами в течение двух часов (я работаю пн-пт с 9:00 до 18:00)</p>
-                        <button class="popup__btn enable-lg" type="submit">Отправить </button>
+                        <button class="popup__btn enable-lg" type="submit">Отправить</button>
                       </div>
                     </form>
                   </div>
@@ -406,14 +454,14 @@
                     <p class="footer__infos-p"><picture><source srcset="img/header-location-icon.webp" type="image/webp"><img src="img/header-location-icon.png" alt=""></picture> г. Москва, г. Щербинка, Восточная улица, д.4</p>
                     <p class="footer__infos-p"><picture><source srcset="img/header-mail-icon.webp" type="image/webp"><img src="img/header-mail-icon.png" alt=""></picture> <b>info@electroff.ru</b></p>
                   </div>
-                  <div class="footer__works"> <a class="footer__works-phone" href="tel::8(495)5422225">8 (495) 54 2222 5</a><a class="footer__works-link" href="#!">Заказать звонок</a>
+                  <div class="footer__works"> <a class="footer__works-phone" href="tel::8(495)5422225">8 (495) 54 2222 5</a><a class="footer__works-link popup-open" href="#!" data-target="tel-popup">Заказать звонок</a>
                     <p class="footer__works-times">Пн-Пт с 09:00 до 18:00</p>
                   </div>
                 </div>
               </div>
             </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20220421202304"></script>
-    <script src="js/app.js?_v=20220421202304"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20220421221428"></script>
+    <script src="js/app.js?_v=20220421221428"> </script>
   </body>
 </html>

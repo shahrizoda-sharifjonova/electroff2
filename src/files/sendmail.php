@@ -11,15 +11,15 @@
     $mail->IsHTML(true);
 
     // от кого письмо
-    $mail->setFrom('ev.larkov@yandex.ru', 'electroff');
+    $mail->setFrom('Info@electorff.ru', 'Electorff');
     // кому отправить
-    $mail->addAddress('ev.larkov@yandex.ru');
+    $mail->addAddress('efe@knikishin.ru');
 
     // тема письмо
-    $mail->Subject = 'Обратная связь c сайта electroff';
+    $mail->Subject = 'Electorff';
 
     // тело письмо
-    $body = '<h1>Обратная связь c сайта electroff</h1>';
+    $body = '<h1>Electorff</h1>';
 
     if(trim(!empty($_POST['name']))){
         $body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';

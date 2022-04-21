@@ -49,6 +49,11 @@
             margin-bottom: 10px;
             color: #A81A47;
             position: relative;
+            margin-left: 15px;
+            @include media(375){
+                margin-left: auto;
+                margin-right: auto;
+            }
             &::before{
                 content: '';
                 position: absolute;

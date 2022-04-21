@@ -18,10 +18,9 @@
     }
     @include media(992){
         background: linear-gradient(270.07deg, #F5F5F5 0.07%, rgba(245, 245, 245, 0) 43.16%, rgba(245, 245, 245, 0) 72.83%, #F5F5F5 99.95%), linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/intro-bg.png) center / cover no-repeat;
-        padding-top: 70px;
-        @include media(992){
-            padding-top: 40px;
-        }
+    }
+    @include media(576){
+        background: url(../img/intro-bg.png) center / cover no-repeat !important;
     }
     &__body{
         padding-top: 70px;
@@ -44,9 +43,8 @@
             }
         }
         @include media(992){
-            padding-top: 40px;
             background: transparent !important;
-            padding: 0 15px;
+            padding: 40px 15px 0 15px;
         }
     }
     &__title{
@@ -55,6 +53,9 @@
         margin-bottom: 16px;    
         @include media(576){
             margin-bottom: 10px !important;
+            font-weight: 700 !important;
+            font-size: 20px !important;
+            line-height: 140% !important;
         }
     }
     &__desc{
@@ -108,8 +109,9 @@
             padding-top: 20px;
             max-width: 100%;
             justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(10px);
             padding-bottom: 80px;
             width: 100%;
             padding-left: 50px;

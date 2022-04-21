@@ -825,6 +825,7 @@
   margin-bottom: 10px;
   color: #A81A47;
   position: relative;
+  margin-left: 15px;
 }
 
 .no-webp .needs__nlo-btn::before {
@@ -1672,6 +1673,8 @@
 .manp__img img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .no-webp .solutions {
@@ -2378,10 +2381,11 @@ ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
     -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     padding-bottom: 80px;
     width: 100%;
     padding-left: 50px;
@@ -2460,6 +2464,10 @@ ul {
   .solutions__item {
     max-width: 500px;
     width: 100%;
+  }
+
+  .popup__body {
+    padding: 70px 0;
   }
 
   .title {
@@ -2560,14 +2568,9 @@ ul {
     background: -o-linear-gradient(179.93deg, #F5F5F5 0.07%, rgba(245, 245, 245, 0) 43.16%, rgba(245, 245, 245, 0) 72.83%, #F5F5F5 99.95%), -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/intro-bg.png) center/cover no-repeat;
     background: linear-gradient(270.07deg, #F5F5F5 0.07%, rgba(245, 245, 245, 0) 43.16%, rgba(245, 245, 245, 0) 72.83%, #F5F5F5 99.95%), linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/intro-bg.png) center/cover no-repeat; }
 
-  .intro {
-    padding-top: 70px;
-  }
-
   .intro__body {
-    padding-top: 40px;
     background: transparent !important;
-    padding: 0 15px;
+    padding: 40px 15px 0 15px;
   }
 
   .intro__list {
@@ -2779,6 +2782,10 @@ ul {
     margin-left: auto !important;
   }
 
+  .popup__body {
+    padding: 20px 0;
+  }
+
   .popup__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2848,12 +2855,6 @@ ul {
   }
 }
 
-@media (max-width: 992px) and (max-width: 992px) {
-  .intro {
-    padding-top: 40px;
-  }
-}
-
 @media (max-width: 768px) {
   .enable-md {
     display: block !important;
@@ -2876,6 +2877,10 @@ ul {
         -ms-flex-align: center;
             align-items: center;
     row-gap: 20px;
+  }
+
+  .manp__img {
+    width: 420px;
   }
 
   .solutions__title {
@@ -2978,8 +2983,14 @@ ul {
     line-height: 140%;
   }
 
+  .no-webp .intro {
+    background: url(../img/intro-bg.png) center/cover no-repeat !important; }
+
   .intro__title {
     margin-bottom: 10px !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    line-height: 140% !important;
   }
 
   .intro__desc {
@@ -3136,6 +3147,10 @@ ul {
     bottom: -60px;
   }
 
+  .manp__img {
+    width: 310px;
+  }
+
   .solutions__title {
     margin-bottom: 30px;
   }
@@ -3189,10 +3204,6 @@ ul {
 
   .order__btn {
     width: 270px !important;
-  }
-
-  .popup__body {
-    padding: 100px 0px;
   }
 
   .popup__input {
@@ -3262,6 +3273,11 @@ ul {
   .intro__btn:nth-of-type(1) {
     width: 100% !important;
   }
+
+  .needs__nlo-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .webp .intro { background: -o-linear-gradient(179.93deg, #F5F5F5 0.07%, rgba(245, 245, 245, 0) 43.16%, rgba(245, 245, 245, 0) 72.83%, #F5F5F5 99.95%), -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/intro-bg.webp) center/cover no-repeat; background: linear-gradient(270.07deg, #F5F5F5 0.07%, rgba(245, 245, 245, 0) 43.16%, rgba(245, 245, 245, 0) 72.83%, #F5F5F5 99.95%), linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/intro-bg.webp) center/cover no-repeat; }
@@ -3303,4 +3319,9 @@ ul {
 @media (max-width: 992px) {
 
   .webp .intro { background: -o-linear-gradient(179.93deg, #F5F5F5 0.07%, rgba(245, 245, 245, 0) 43.16%, rgba(245, 245, 245, 0) 72.83%, #F5F5F5 99.95%), -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/intro-bg.webp) center/cover no-repeat; background: linear-gradient(270.07deg, #F5F5F5 0.07%, rgba(245, 245, 245, 0) 43.16%, rgba(245, 245, 245, 0) 72.83%, #F5F5F5 99.95%), linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/intro-bg.webp) center/cover no-repeat; }
+}
+
+@media (max-width: 576px) {
+
+  .webp .intro { background: url(../img/intro-bg.webp) center/cover no-repeat !important; }
 }
