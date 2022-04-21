@@ -1,51 +1,51 @@
 .intro{
-    background: #F5EFF1;
+    // background: #F5EFF1;
+    background: linear-gradient(270.07deg, #F5F5F5 0.07%, rgba(245, 245, 245, 0) 43.16%, rgba(245, 245, 245, 0) 72.83%, #F5F5F5 99.95%), linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/intro-bg.png) center / cover no-repeat;
     position: relative;
-    @include media(992){
-        background: linear-gradient(270.07deg, #F5F5F5 0.07%, rgba(245, 245, 245, 0) 43.16%, rgba(245, 245, 245, 0) 72.83%, #F5F5F5 99.95%), linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/intro-bg.png) center / cover no-repeat;
-        padding-top: 70px;
-        padding-bottom: 80px;
-        @include media(1200){
-            padding-bottom: 0;
-        }
-        @include media(992){
-            padding-top: 40px;
-            padding-bottom: 50px;
-        }
-    }
-    &::before{
+    &::after{
         content: '';
         position: absolute;
-        background: rgba(255, 255, 255, 0.4);
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-        backdrop-filter: blur(20px);
-        width: 1175px;
-        height: 382px;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        @include media(1650){
-            width: 1000px;
-        }
-        @include media(1400){
-            width: 800px;
-        }
+        background: #E75B88;
+        filter: blur(46px);
+        border-radius: 100px;
+        width: 70px;
+        height: 70px;
+        bottom: 70px;
+        left: 60%;
         @include media(1200){
             display: none;
         }
     }
-    &__body{
+    @include media(992){
         background: linear-gradient(270.07deg, #F5F5F5 0.07%, rgba(245, 245, 245, 0) 43.16%, rgba(245, 245, 245, 0) 72.83%, #F5F5F5 99.95%), linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/intro-bg.png) center / cover no-repeat;
         padding-top: 70px;
-        padding-bottom: 80px;
+        @include media(992){
+            padding-top: 40px;
+        }
+    }
+    &__body{
+        padding-top: 70px;
         display: flex;
         justify-content: space-between;
-        @include media(1200){
-            padding-bottom: 0;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            background: #E75B88;
+            filter: blur(90px);
+            border-radius: 100px;
+            width: 135px;
+            height: 135px;
+            top: 50%;
+            left: -75.5px;
+            transform: translateY(-50%);
+            @include media(1200){
+                display: none;
+            }
         }
         @include media(992){
             padding-top: 40px;
-            background: none;
+            background: transparent !important;
             padding: 0 15px;
         }
     }
@@ -69,6 +69,31 @@
             line-height: 150%;
         }
     }
+    &__content{
+        width: max-content;
+        max-width: 100%;
+        padding-bottom: 72px;
+        position: relative;
+        @include media(1200){
+            width: 100%;
+        }
+        @include media(768){
+            padding-bottom: 50px;
+        }
+        // &::before{
+            // content: '';
+            // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+            // backdrop-filter: blur(20px);
+            // width: 3200px;
+            // height: 100%;
+            // right: 0;
+            // bottom: 0;
+            // position: absolute;
+            // @include media(1200){ 
+            //     display: none;
+            // }
+        // }
+    }
     &__list{
         padding-top: 20px;
         display: flex;
@@ -83,14 +108,12 @@
             padding-top: 20px;
             max-width: 100%;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.4);
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
             backdrop-filter: blur(20px);
             padding-bottom: 80px;
             width: 100%;
             padding-left: 50px;
             padding-right: 50px;
-            margin-left: -15px;
             width: calc(100% + 30px);
         }
         @include media(992){
@@ -122,6 +145,8 @@
             font-weight: 500;
         }
         img{
+            box-shadow: 0px 2px 5px 1px rgba(61, 0, 19, 0.15);
+            border-radius: 50%;
             @include media(576){
                 width: 40px;
                 height: 40px;

@@ -164,8 +164,9 @@ ul{
     padding-left: 15px;
     padding-right: 15px;
     @include media(576){
-        width: 167px;
-        height: 167px;
+        width: 185px;
+        height: 185px;
+        margin-top: -5px;
     }
     &-p{
         font-weight: 700;

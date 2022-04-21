@@ -1,7 +1,11 @@
 .partners{
     background: #263D4F;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     @include media(576){
         margin-bottom: 130px;
+        min-height: max-content;
     }
     &__title{
         margin-bottom: 30px;
