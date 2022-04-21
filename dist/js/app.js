@@ -17821,6 +17821,7 @@ const thirdMenu = document.querySelector('.third-menu');
 const menuIcons = document.querySelector('.menu-icons');
 const headerList = document.querySelector('.header__list');
 const body = document.querySelector('body');
+const headerLink = document.querySelectorAll('.header__link');
 
 menu.addEventListener('click', (e)=>{
     menu.classList.toggle('active')
@@ -17831,6 +17832,18 @@ menu.addEventListener('click', (e)=>{
     menuIcons.classList.toggle('active')
     headerList.classList.toggle('active')
 })
+
+headerLink.forEach(e => {
+    e.addEventListener('click', (e)=>{
+        menu.classList.remove('active')
+        disableMenu.classList.remove('active')
+        body.classList.remove('active')
+        firstMenu.classList.remove('active')
+        thirdMenu.classList.remove('active')
+        menuIcons.classList.remove('active')
+        headerList.classList.remove('active')
+    })
+}); 
 
 new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".needs__swiper", { 
     slidesPerView: 1,
