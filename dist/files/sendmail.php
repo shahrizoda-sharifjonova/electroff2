@@ -13,7 +13,7 @@
     // от кого письмо
     $mail->setFrom('Info@electorff.ru', 'Electorff');
     // кому отправить
-    $mail->addAddress('efe@knikishin.ru');
+    $mail->addAddress('Info@electorff.ru');
 
     // тема письмо
     $mail->Subject = 'Electorff';

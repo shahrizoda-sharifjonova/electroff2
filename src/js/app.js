@@ -2,10 +2,6 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 
-import Swiper, { Navigation, Pagination } from 'swiper'; 
-
-const swiper = new Swiper();
-
 const menu = document.querySelector('.menu');
 const disableMenu = document.querySelector('.disable-menu');
 const firstMenu = document.querySelector('.first-menu');
@@ -40,14 +36,13 @@ headerLink.forEach(e => {
 new Swiper(".needs__swiper", { 
     slidesPerView: 1,
     spaceBetween: 10,
-    modules: [Navigation],
     autoplay: {
         delay: 2500,
         disableOnInteraction: true,
     },
     navigation: {
-        prevEl: ".swiper-button-prev",
-        nextEl: ".swiper-button-next",
+        prevEl: ".needs-button-prev",
+        nextEl: ".needs-button-next",
     },
     breakpoints: {
         1400: {
@@ -72,7 +67,6 @@ new Swiper(".needs__swiper", {
 new Swiper(".estates__swiper", { 
     slidesPerView: 1,
     spaceBetween: 30,
-    modules: [Navigation, Pagination],
     autoplay: {
         delay: 2500,
         disableOnInteraction: true,
@@ -82,18 +76,17 @@ new Swiper(".estates__swiper", {
         type: "progressbar",
     },
     navigation: {
-        prevEl: ".swiper-button-prev",
-        nextEl: ".swiper-button-next",
+        prevEl: ".estates-button-prev",
+        nextEl: ".estates-button-next",
     },
 });
 
 new Swiper(".results__swiper", { 
     slidesPerView: 2,
     spaceBetween: 20,
-    modules: [Navigation],
     navigation: {
-        prevEl: ".swiper-button-prev",
-        nextEl: ".swiper-button-next",
+        prevEl: ".results-button-prev",
+        nextEl: ".results-button-next",
     },
 });
 
@@ -121,33 +114,18 @@ popupClose.forEach(ele=> {
     })
 });
 
-
-const form = document.getElementById('formContent');
-form.addEventListener('submit', formSend);
-async function formSend(e) {
-    e.preventDefault();
-    let formData = new FormData(form);
-    form.classList.add('sending');
-    let response = await fetch('files/sendmail.php', {
-        method: 'POST',
-        body: formData
-    });
-    if(response.ok){
-        let result = await response.json();
-        form.classList.add('success');
-        form.classList.remove('sending');
-        form.reset();
-        location.reload();
-    }else{
-        alert("Ошибка");
-        form.classList.remove('sending');
-    }
-}
-
-import IMask from 'imask';
-
 var phoneMask = IMask(
     document.getElementById('number'), {
+      mask: '+{7} (000) 000 - 00 - 00'
+});
+
+var phoneMask = IMask(
+    document.getElementById('number2'), {
+      mask: '+{7} (000) 000 - 00 - 00'
+});
+
+var phoneMask = IMask(
+    document.getElementById('number3'), {
       mask: '+{7} (000) 000 - 00 - 00'
 });
 
@@ -172,3 +150,72 @@ manpOpen.forEach(el => {
 manpClose.addEventListener('click', (e)=>{
     manp.classList.remove('active');
 })
+
+
+const form = document.getElementById('formContent');
+form.addEventListener('submit', formSend);
+async function formSend(e) {
+    e.preventDefault();
+    let formData = new FormData(form);
+    form.classList.add('sending');
+    let response = await fetch('files/sendmail.php', {
+        method: 'POST',
+        body: formData
+    });
+    if(response.ok){
+        let result = await response.json();
+        form.classList.add('success');
+        form.classList.remove('sending');
+        form.reset();
+        location.reload();
+    }else{
+        alert("Ошибка");
+        form.classList.remove('sending');
+    }
+}
+
+const consultForm = document.getElementById('consultFormContent');
+consultForm.addEventListener('submit', consultFormSend);
+async function consultFormSend(e) {
+    e.preventDefault();
+    let consultFormData = new FormData(consultForm);
+    consultForm.classList.add('sending');
+    let response = await fetch('files/sendmail.php', {
+        method: 'POST',
+        body: consultFormData
+    });
+    if(response.ok){
+        let result = await response.json();
+        consultForm.classList.add('success');
+        consultForm.classList.remove('sending');
+        consultForm.reset();
+        location.reload();
+    }else{
+        alert("Ошибка");
+        consultForm.classList.remove('sending');
+    }
+}
+
+const downloadForm = document.getElementById('downloadFormContent');
+downloadForm.addEventListener('submit', downloadFormSend);
+async function downloadFormSend(e) {
+    e.preventDefault();
+    let downloadFormData = new FormData(downloadForm);
+    downloadForm.classList.add('sending');
+    let response = await fetch('files/sendmail.php', {
+        method: 'POST',
+        body: downloadFormData
+    });
+    if(response.ok){
+        let result = await response.json();
+        const file = document.getElementById('downloadframe')
+        file.click();
+        downloadForm.classList.add('success');
+        downloadForm.classList.remove('sending');
+        downloadForm.reset();
+        location.reload();
+    }else{
+        alert("Ошибка");
+        downloadForm.classList.remove('sending');
+    }
+}

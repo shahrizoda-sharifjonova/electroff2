@@ -11,9 +11,9 @@
     $mail->IsHTML(true);
 
     // от кого письмо
-    $mail->setFrom('Info@electorff.ru', 'Electorff');
+    $mail->setFrom('shahrizodadeveloping@gmail.com', 'Electorff');
     // кому отправить
-    $mail->addAddress('efe@knikishin.ru');
+    $mail->addAddress('shahrizodadeveloping@gmail.com');
 
     // тема письмо
     $mail->Subject = 'Electorff';

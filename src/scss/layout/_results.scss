@@ -105,51 +105,53 @@
             &-disabled{
                 opacity: 0.3;
             }
-            &-prev{
-                position: relative;
+        }
+    }
+    &-button{
+        &-prev{
+            position: relative;
+            width: 40px;
+            height: 30px;
+            left: -70px;
+            &::before{
+                content: '';
+                background: url(../img/estates-prev.svg) center / cover no-repeat;
                 width: 40px;
                 height: 30px;
-                left: -70px;
-                &::before{
-                    content: '';
-                    background: url(../img/estates-prev.svg) center / cover no-repeat;
-                    width: 40px;
-                    height: 30px;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50% , -50%);
-                    position: absolute;
-                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-                }
-                @include media(1400){
-                    right: -50px;
-                }
-                @include media(576){
-                    left: 0%;
-                }
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                position: absolute;
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
             }
-            &-next{
-                position: relative;
+            @include media(1400){
+                right: -50px;
+            }
+            @include media(576){
+                left: 0%;
+            }
+        }
+        &-next{
+            position: relative;
+            width: 40px;
+            height: 30px;
+            right: -70px;
+            &::before{
+                content: '';
+                background: url(../img/estates-next.svg) center / cover no-repeat;
                 width: 40px;
                 height: 30px;
-                right: -70px;
-                &::before{
-                    content: '';
-                    background: url(../img/estates-next.svg) center / cover no-repeat;
-                    width: 40px;
-                    height: 30px;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50% , -50%);
-                    position: absolute;
-                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-                }
-                @include media(1400){
-                    right: -50px;
-                }
-                @include media(576){
-                    right: 0;
-                }
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                position: absolute;
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+            }
+            @include media(1400){
+                right: -50px;
+            }
+            @include media(576){
+                right: 0;
             }
         }
     }
